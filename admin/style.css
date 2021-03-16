@@ -1,0 +1,193 @@
+body{
+    background-color: black;
+    color: chartreuse;
+}
+
+
+.questionadd{
+    padding:30px;
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 4vw;
+    background-color: black;
+
+}
+
+input[type="name"] {
+    width:100%;
+    /* color: #338b4b; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    padding:5px;
+    border-radius: 10px;
+    border: solid #fff;
+    outline:none;
+    color: chartreuse;
+    background-color: transparent;
+    /* box-shadow: -7px -7px -7px rgb(240, 236, 236); */
+    }
+
+    /* css for contact us  */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+*
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(image/laptop-mobile.jpg);
+    background-size: cover;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFF;
+}
+.contact .content p{
+    font-weight: 300;
+    color: #FFF;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactinfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactinfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #FFF;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactinfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.container .contactinfo .box .text p{
+    font-weight: 300;
+    color: #FFF;
+}
+
+
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #FFF;
+}
+.contactform h2{
+    font-size: relative;
+    color:rgb(100, 100, 100);
+    font-weight: 500;
+}
+
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactform .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width:991px){
+ .contact{
+        padding: 50px;
+    }
+ .container{
+     flex-direction: column;
+ }
+
+ .container .contacinfo{
+     margin-bottom: 40px;
+ }
+ .container .contactinfo, 
+ .contactform{
+     margin-bottom: 100%;
+ }
+}
+
+
