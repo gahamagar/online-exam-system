@@ -14,6 +14,9 @@ if($query){
 
 // Change here
 header('Location: index.php');
+session_start();
+$_SESSION['first_name'] = $result['first_name'];
+
 
 }
 else{
