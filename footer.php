@@ -3,6 +3,6 @@
     |
     <a href="#">Privacy Policy</a>
 
-    <p class="rights">&copy;2021 All Rights Reserved गणेश</p>
+    <p class="rights">&copy;2021 All Rights Reserved</p>
 
 </footer>

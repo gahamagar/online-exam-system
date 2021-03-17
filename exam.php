@@ -12,12 +12,18 @@
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
-    </div>
-    <div class="admin_login">
-            <ul>
-            <li><a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i>  Admin Login</a></li>
-            </ul>
+        <div class="dropdown">
+            <span onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o fa-2x"></i></span>
+            <div id="myDropdown" class="dropdown-content">
+                <a>Signed in As</a>
+                <a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $firstName ?></a>
+                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Help</a>
+                <a><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
+                <a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+            </div>
         </div>
+    </div>
+    
     <div class="nav_bar">
         <ul>
             <li><a href="index.php">Home</a></li>

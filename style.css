@@ -16,15 +16,17 @@ font-weight: bolder;
 /* margin-left: 100px; */
 }
 
-.admin_login a{
+/* .admin_login a{
+    width: 25px;
+    height: 25px;
     background-color: #000000;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50%; */
 
-}
+
 .admin_login a:hover{
     background: chartreuse;
-    color: cornsilk;
+    color: #fff;
 }
 
 .form_box{
@@ -103,15 +105,57 @@ border-radius: 10px;
     justify-content: space-between;
 }
 
+.dropbtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 50px;
+
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    /* background-color: #2980B9; */
+  }
+  
+  .dropdown {
+   position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 110px;
+    right: 3px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+      background-color: #ddd;}
+  
+  .show {display: block;}
+
+
 .welcome_greeting{
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 30px;
 }
 .welcome_greeting h1{
     font-size: 4vw;
     font-weight: bolder;
-    color: darkorange;
+    color:#161414;
+    
 }
 
 h1{
@@ -244,8 +288,9 @@ ul li a{
 /* background-size: cover; */
 /* height: 800px; */
 width: 100%;
-height: auto;
+height: 80%;
 background-position: center;
+opacity: .7;
 }
 ul li a:hover{
     background-color: #06d03c;
@@ -278,8 +323,8 @@ label.error_message{
 }
 
 .footer-page{
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     width: 100%;
     /* padding-top: 10px; */
     /* margin-bottom: 10px; */
@@ -346,7 +391,7 @@ display: flex;
 }
 img{
     width: 100%;
-    height: 100%;
+    height: auto;
 
     display: cover;
     /* margin-left: 110%; */
