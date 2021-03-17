@@ -1,34 +1,25 @@
+<?php
+include 'connection.php';
+
+session_start();
+$firstName = "";
+$message = "";
+if (isset($_SESSION['first_name'])) {
+    $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    //  echo $message;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 80%;
-            border: 1px solid #CC471B;
-            margin: 30px;
-
-        }
-
-
-        td,
-        th {
-            /* border: 1px solid #000; */
-            text-align: center;
-            padding: 8px;
-        }
-
-        table tr:first-child {
-            color: #fff;
-            background: #CC471B;
-            border: 0;
-
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Student Results Sheet</title>
 </head>
@@ -37,17 +28,15 @@
     <center>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <?php include 'userprofile.php' ?>
     </div>
     <div class="nav_bar">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="exam.php">Enroll Exam</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
             <li><a href="result.php">Results</a></li>
-            <li><a href="contactus.php">Contact</a></li>
-            <li><a href="about.php">About</a></li>
-            <!-- <li><a href="#">
-
-                </a></li> -->
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
         </ul>
     </div>
 
@@ -85,7 +74,12 @@
         </form>
 
     </center>
-    <?php 
+    <!-- <script>
+            function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        </script>
+    <?php  
     require_once 'footer.php'?>
 </body>
 

@@ -1,36 +1,42 @@
+<?php
+include 'connection.php';
+session_start();
+$firstName = "";
+$message = "";
+if (isset($_SESSION['first_name'])) {
+    $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    //  echo $message;
+}
+?>
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <title>Questions</title>
-
+    <title>Test Your Skill</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
-        <div class="dropdown">
-            <span onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o fa-2x"></i></span>
-            <div id="myDropdown" class="dropdown-content">
-                <a>Signed in As</a>
-                <a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $firstName ?></a>
-                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Help</a>
-                <a><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
-                <a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
-            </div>
-        </div>
+        <?php include "userprofile.php"?>
     </div>
     
     <div class="nav_bar">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="exam.php">Enroll Exam</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
             <li><a href="result.php">Results</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="about.php">About Us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
             <!-- <li><a href="#">
 
                 </a></li> -->
@@ -82,9 +88,11 @@
             ?>
 
         </ol>
-        <button type="submit" class="form-element-login">Submit Qiuz</button>
+        <button type="submit" class="submit-btn">Submit Qiuz</button>
+        <span type="submit" class="submit">Submit Quiz</span>
     </form>
-    <!-- <?php require_once 'footer.php'; ?> -->
+    <?php require_once 'footer.php'; ?>
+    
 </body>
 
 </html>

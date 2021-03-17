@@ -13,9 +13,12 @@ if($query){
 // echo "data inserted successfully";
 
 // Change here
-header('Location: index.php');
 session_start();
 $_SESSION['first_name'] = $result['first_name'];
+$_SESSION['last_name'] = $result['last_name'];
+
+header('Location: index.php');
+
 
 
 }

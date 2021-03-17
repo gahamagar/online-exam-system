@@ -30,7 +30,8 @@ if (isset($_SESSION['message'])) {
             <span onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o fa-2x"></i></span>
             <div id="myDropdown" class="dropdown-content">
                 <a>Signed in As</a>
-                <a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?php echo $firstName ?></a>
+                <a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <b><?php echo $firstName ?></b></a><hr>
+                <a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a>
                 <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Help</a>
                 <a><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
                 <a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
@@ -42,15 +43,21 @@ if (isset($_SESSION['message'])) {
             <li><a href="#">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
             <li><a href="result.php">Results</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="contactus.php">Contact us</a></li>
             <li><a href="about.php">About us</a></li>
         </ul>
     </div>
     <div class="image_background" style="margin: -4px 0;">
         <img src="image/pexels-christina-morillo-1181243.jpg" alt="">
+        
         <div class="welcome_greeting">
-            <h1>Dear <span style="color: indigo;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
+        <div class="search_bar">
+            <input type="text" placeholder="Search...">
+            <!-- <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span> -->
         </div>
+           <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
+        <h3>You Can Test Your Skill Form Here <br> And Upgrade Your Skills</h3>
+       </div>
     </div>
     <footer class="footer-page">
         <a href="#">Home</a>

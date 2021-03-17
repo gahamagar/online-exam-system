@@ -16,19 +16,6 @@ font-weight: bolder;
 /* margin-left: 100px; */
 }
 
-/* .admin_login a{
-    width: 25px;
-    height: 25px;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 50%; */
-
-
-.admin_login a:hover{
-    background: chartreuse;
-    color: #fff;
-}
-
 .form_box{
 /* margin-left:500px; */
 margin-top: 50px;
@@ -112,11 +99,7 @@ border-radius: 10px;
     margin-right: 50px;
 
   }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    /* background-color: #2980B9; */
-  }
-  
+    
   .dropdown {
    position: relative;
     display: inline-block;
@@ -157,6 +140,33 @@ border-radius: 10px;
     color:#161414;
     
 }
+.welcome_greeting h3{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.search_bar input{
+    margin-bottom: 20%;
+    align-items: center;
+    margin-left: 80%;
+    padding: 10px 25px 10px 10px;
+    border-radius: 20px;
+    opacity: .5;
+
+}
+input[type="text"]{
+border: 2px solid #000;
+color: #000;
+font-size: 15px;
+font-weight: bold;
+padding:10px 25px 10px 10px;
+border-radius: 50px;
+/* border:none; */
+outline:none;
+background-color: transparent;
+}
+
 
 h1{
     font-size: 3vw;
@@ -198,6 +208,27 @@ a{
     color:rgb(100, 100, 100);
     font-weight: bolder;
 }
+.submit{
+    padding: 10px 15px 10px 10px;
+    border: 2px solid springgreen;
+    background-color: steelblue;
+    border-radius: 10px;
+}
+button .submit-btn{
+/* width:65%; */
+margin-left: 5%;
+height: 50px;
+outline: none;
+border:none;
+font-weight:bolder;
+font-size:1.5vw;
+border-radius: 5px;
+color:rgb(100, 100, 100);
+background-color: transparent;
+box-shadow: -7px -7px 17px rgb(243, 243, 243), 7px 7px 17px rgb(128, 128, 128);
+    
+}
+
 .line-break{
 align-items: center;
 justify-content: center;

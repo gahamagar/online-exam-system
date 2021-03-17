@@ -1,6 +1,17 @@
 <?php
 require_once "connection.php";
+session_start();
+$message="";
+if(isset($_SESSION['message'])){
+    $message=$_SESSION['message'];
+unset($_SESSION['message']);
+
+}
+// echo $_SESSION['message'];
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

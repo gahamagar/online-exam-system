@@ -12,11 +12,6 @@
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
-        <div class="admin_login">
-            <ul>
-            <li><a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i>  Admin Login</a></li>
-            </ul>
-        </div>
     </div>
     <div class="nav_bar">
         <ul>

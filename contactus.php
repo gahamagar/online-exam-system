@@ -19,12 +19,25 @@ if (isset($_SESSION['message'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
+
     <title>Online Examination System | Contact Us</title>
 </head>
 <body>
-<!-- <?php  include 'userprofile.php' ?> -->
 
-<!-- <?php require_once 'navbar.php'?> -->
+<div class="heading">
+        <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <?php include 'userprofile.php'?>
+    </div>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
+            <li><a href="result.php">Results</a></li>
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
+        </ul>
+    </div>
+
 
 <section class="contact">
     <div class="content">
@@ -85,5 +98,6 @@ if (isset($_SESSION['message'])) {
 include_once "footer.php";
 ?>
     
+
 </body>
 </html>
