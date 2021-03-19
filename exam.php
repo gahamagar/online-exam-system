@@ -12,16 +12,16 @@ if (isset($_SESSION['message'])) {
 }
 ?>
 
-?>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Test Your Skill</title>
+    <title>Online Examination System | Test Your Skill</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 
 <body>
@@ -88,7 +88,7 @@ if (isset($_SESSION['message'])) {
             ?>
 
         </ol>
-        <button type="submit" class="submit-btn">Submit Qiuz</button>
+        <button type="submit" class="submit-btn">Submit Quiz</button>
         <span type="submit" class="submit">Submit Quiz</span>
     </form>
     <?php require_once 'footer.php'; ?>

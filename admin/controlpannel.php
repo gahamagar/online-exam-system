@@ -1,13 +1,10 @@
-<?php
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Admin Panel</title>
 </head>
 <body>
@@ -15,21 +12,21 @@
 <div class="heading">
 
 <h1>WEL COME TO ADMIN PANEL</h1>
-
+<?php include '../userprofile.php'?>
 </div>
 
 <div class="nav_bar">
     <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="studentmanage.php">Student Manage</a></li>
+    <li><a href="studentmanage.php">Students Manage</a></li>
     <li><a href="qnsadd.php">Add Questions</a></li>
     <li><a href="qnslist.php">Question Lists</a></li>
-    <li><a href="adminlogin.php">LogOut</a></li>
+    <li><a href="adminlogin.php">Log Out</a></li>
     </ul>
 </div>
 <center>
 <div class="main">
-    <h1>Control Admin Panel</h1>
+    <h1>Admin Control Panel</h1>
 <form action="" class="control_box">
 
 <h2>Wel come to Admin Control Panel</h2>

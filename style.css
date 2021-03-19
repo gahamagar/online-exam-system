@@ -146,13 +146,17 @@ border-radius: 10px;
     /* text-align: center; */
 }
 
-.search_bar input{
-    margin-bottom: 20%;
-    align-items: center;
-    margin-left: 80%;
-    padding: 10px 25px 10px 10px;
-    border-radius: 20px;
-    opacity: .5;
+.search_bar{
+    position: relative;
+}
+.search_bar input[type="text"]{
+    width: 94%;
+}
+.search_bar span i {
+    position: absolute;
+    right: 10px;
+    padding: 3px 0;
+    margin-right: 10px
 
 }
 input[type="text"]{
@@ -452,5 +456,20 @@ table tr:first-child {
     color: #fff;
     background: #CC471B;
     border: 0;
+
+}
+
+
+/* CSS star for result box */
+
+.result_box{
+    margin-top: 50px;
+    background-color: rgb(221, 221, 221);
+    box-shadow: -7px -7px 17px rgb(243, 243, 243), 7px 7px 17px rgb(128, 128, 128);
+    padding:30px;
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+
 
 }

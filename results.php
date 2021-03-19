@@ -1,11 +1,24 @@
+<?php 
+session_start();
+$firstName = "";
+$message = "";
+if (isset($_SESSION['first_name'])) {
+    $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    //  echo $message;
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <title>PHP Quiz</title>
-
+    <title>Online Examination System | Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -57,13 +70,22 @@
 
         $examResult = number_format($totalCorrect * $onecorrect, 2);
         $avgExamResult = number_format($examResult / $totalQuestions, 2);
-        echo "Result => " . $examResult;
-        echo "<br />Avg Result => " . $avgExamResult;
+?>
 
-        echo "<div id='results'>$totalCorrect / $totalQuestions correct</div>";
+<center>
+        <div class="result_box">
+            <h1>"Congratulations"</h1>
+            <h3><?php echo $firstName ?></h3>
+            <h3>You have obtained <?php $totalCorrect?></h3>
+        <?php
+        // echo "Result => " . $examResult;
+        // echo "<br />Avg Result => " . $avgExamResult;
+
+        echo "<div id='results'>$totalCorrect Out of  $totalQuestions </div>";
 
         ?>
-
+        </div>
+        </center>
     </div>
 
 

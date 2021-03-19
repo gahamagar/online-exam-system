@@ -26,6 +26,7 @@ if (isset($_SESSION['message'])) {
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <h3>Test Your Skills and Upgrade Yourself</h3>
         <div class="dropdown">
             <span onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o fa-2x"></i></span>
             <div id="myDropdown" class="dropdown-content">
@@ -52,8 +53,8 @@ if (isset($_SESSION['message'])) {
         
         <div class="welcome_greeting">
         <div class="search_bar">
+            <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
             <input type="text" placeholder="Search...">
-            <!-- <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span> -->
         </div>
            <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
         <h3>You Can Test Your Skill Form Here <br> And Upgrade Your Skills</h3>
