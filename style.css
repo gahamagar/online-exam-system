@@ -464,12 +464,30 @@ table tr:first-child {
 
 .result_box{
     margin-top: 50px;
+    margin-bottom: 20px;
     background-color: rgb(221, 221, 221);
-    box-shadow: -7px -7px 17px rgb(243, 243, 243), 7px 7px 17px rgb(128, 128, 128);
+    /* box-shadow: -7px -7px 17px rgb(243, 243, 243), 7px 7px 17px rgb(128, 128, 128); */
     padding:30px;
-    width: 25%;
-    height: auto;
+    width: 50%;
+    height: 500px;
     border-radius: 10px;
+    background-image: url(./image/congrats\ \(1\).png);
+    background-size: cover;
+    text-align: center;
+    align-items: center;
 
 
 }
+.result_box h1{
+    text-align: center;
+   margin-top: 220px;
+   margin-left: 50px;
+}
+
+.result_box h3{
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+/* end of css for result box */
+

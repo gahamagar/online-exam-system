@@ -34,7 +34,7 @@ unset($_SESSION['message']);
         </div>
         <input type="name" class="form-element" name="first_name" placeholder="First Name" required=''>
         <input type="name"class="form-element" name="last_name" placeholder="Last Name" required=''>
-        <input type="name"class="form-element"name="mobile" placeholder="Mobile Number" required=''>
+        <input type="name"class="form-element"name="mobile" placeholder="Mobile Number" maxlength="10" minlength="10" required=''>
         <input type="name"class="form-element"name="address" placeholder="Address" required=''>
         <input type="name" class="form-element" name="email" placeholder="Email" required=''>
         <input type="password"class="form-element"name="password" placeholder="Password" required=''>

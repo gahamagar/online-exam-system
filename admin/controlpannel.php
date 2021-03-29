@@ -1,3 +1,16 @@
+<?php
+session_start();
+$firstName = "";
+$message = "";
+if (isset($_SESSION['first_name'])) {
+    $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    //  echo $message;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +25,9 @@
 <div class="heading">
 
 <h1>WEL COME TO ADMIN PANEL</h1>
-<?php include '../userprofile.php'?>
+<?php include '../userprofile.php';
+
+?>
 </div>
 
 <div class="nav_bar">
@@ -21,7 +36,6 @@
     <li><a href="studentmanage.php">Students Manage</a></li>
     <li><a href="qnsadd.php">Add Questions</a></li>
     <li><a href="qnslist.php">Question Lists</a></li>
-    <li><a href="adminlogin.php">Log Out</a></li>
     </ul>
 </div>
 <center>

@@ -1,0 +1,43 @@
+/* CSS START FOR FRONT PAGE */
+body{
+    /* background-color: rgb(221, 221, 221); */
+}
+
+
+.wrapper{
+    margin-top: 0;
+    width: 100%;
+    /* position: relative; */
+    /* display: flex;   */
+    
+}
+.wrapper h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.wrapper h3{
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 4vw;
+    margin-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+img{
+ padding-right: 10px;
+width: 50%;
+height: 500px;
+background-size: cover;
+float: right;
+}
+
+.wrapper h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+  
+

@@ -1,9 +1,13 @@
 <?php 
 session_start();
 $firstName = "";
+// $lastName = "";
 $message = "";
 if (isset($_SESSION['first_name'])) {
     $firstName = $_SESSION['first_name'];
+
+    // if (isset($_SESSION['last_name'])) {
+    //     $lastName = $_SESSION['last_name'];
 }
 if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
@@ -23,10 +27,31 @@ if (isset($_SESSION['message'])) {
 </head>
 
 <body>
-
+<div class="heading">
+        <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <h3>Test Your Skills and Upgrade Yourself</h3>
+        <div class="dropdown">
+            <span onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o fa-2x"></i></span>
+            <div id="myDropdown" class="dropdown-content">
+                <a>Signed in As</a>
+                <a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <b><?php echo $firstName ?></b></a><hr>
+                <a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a>
+                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Help</a>
+                <a><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
+                <a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+            </div>
+        </div>
+    </div>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
+            <li><a href="result.php">Results</a></li>
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
+        </ul>
+    </div>
     <div id="page-wrap">
-
-        <h1>Final Results</h1>
 
         <?php
 
@@ -34,56 +59,35 @@ if (isset($_SESSION['message'])) {
 
         $query = mysqli_query($connection, "SELECT * FROM questions");
         $totalQuestions = mysqli_num_rows($query);
-
-        $answer1 = $_POST['question-1-answers'];
-        $answer2 = $_POST['question-2-answers'];
-        $answer3 = $_POST['question-3-answers'];
-        // $answer4 = $_POST['question-4-answers'];
-        // $answer5 = $_POST['question-5-answers'];
-        // $answer6 = $_POST['question-6-answers'];
-        // $answer7 = $_POST['question-7-answers'];
-        // $answer8 = $_POST['question-8-answers'];
-        // $answer9 = $_POST['question-9-answers'];
-        // $answer10 = $_POST['question-10-answers'];
-
+        $correct_ans ='correct_ans';
+        $answer = $_POST['correct_ans'];
+       
+       
         $totalCorrect = 0;
         $onecorrect = 5;
 
-        if ($answer1 == "B") {
+        if ($answer == "correct_ans") {
             $totalCorrect++;
         }
-        if ($answer2 == "A") {
-            $totalCorrect++;
-        }
-        if ($answer3 == "C") {
-            $totalCorrect++;
-        }
-        // if ($answer4 == "D") { $totalCorrect++; }
-        // if ($answer5 == "A") { $totalCorrect++; }
-        // if ($answer6 == "A") { $totalCorrect++; }
-        // if ($answer7 == "B") { $totalCorrect++; }
-        // if ($answer8 == "D") { $totalCorrect++; }
-        // if ($answer9 == "C") { $totalCorrect++; }
-        // if ($answer10 == "C") { $totalCorrect++; }
-        // if ($answer10) { $totalCorrect++; }
+      
 
 
-        $examResult = number_format($totalCorrect * $onecorrect, 2);
-        $avgExamResult = number_format($examResult / $totalQuestions, 2);
+        $examResult = number_format($totalCorrect * $onecorrect);
+        // $avgExamResult = number_format($examResult / $totalQuestions, 2);
 ?>
 
 <center>
         <div class="result_box">
-            <h1>"Congratulations"</h1>
-            <h3><?php echo $firstName ?></h3>
+            <!-- <h1>"Congratulations"</h1> -->
+            <h1><?php echo $firstName?></h1>
             <h3>You have obtained <?php $totalCorrect?></h3>
         <?php
-        // echo "Result => " . $examResult;
-        // echo "<br />Avg Result => " . $avgExamResult;
+      
 
-        echo "<div id='results'>$totalCorrect Out of  $totalQuestions </div>";
+        echo "<div id='results'><h3>$totalCorrect Out Of $totalQuestions</h3></div>";
 
         ?>
+        <h3><a href="result.php">Click Here</a> To Check Your Position</h3>
         </div>
         </center>
     </div>
