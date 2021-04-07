@@ -12,7 +12,7 @@ $query=mysqli_query($connection,$sql);
 if($query){
 // echo "data inserted successfully";
 
-// Change here
+
 session_start();
 $_SESSION['first_name'] = $result['first_name'];
 $_SESSION['last_name'] = $result['last_name'];
@@ -23,7 +23,7 @@ header('Location: index.php');
 
 }
 else{
-    echo"data not inserted";
+    echo "data not inserted";
 }
 
 

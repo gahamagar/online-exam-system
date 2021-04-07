@@ -49,16 +49,17 @@ if (isset($_SESSION['message'])) {
         </ul>
     </div>
     <div class="image_background" style="margin: -4px 0;">
-        <img src="image/pexels-christina-morillo-1181243.jpg" alt="">
+        <img src="image/online-entrance-exam.png" alt="">
         
         <div class="welcome_greeting">
+        
+           <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
+        <h3>You Can Test Your Skill Form Here <br> And Upgrade Your Skills</h3>
         <div class="search_bar">
             <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
             <input type="text" placeholder="Search...">
         </div>
-           <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
-        <h3>You Can Test Your Skill Form Here <br> And Upgrade Your Skills</h3>
-       </div>
+    </div> 
     </div>
     <footer class="footer-page">
         <a href="#">Home</a>

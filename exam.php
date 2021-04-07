@@ -42,7 +42,7 @@ if (isset($_SESSION['message'])) {
                 </a></li> -->
         </ul>
     </div>
-
+    
     <h1>Attempt to All Questions</h1>
 
     <form action="results.php" method="post" id="quiz">
@@ -88,8 +88,11 @@ if (isset($_SESSION['message'])) {
             ?>
 
         </ol>
-        <button type="submit" class="submit-btn">Submit Quiz</button>
-        <span type="submit" class="submit">Submit Quiz</span>
+       
+        <div class="submitbtn">
+        <button type="submit">Submit Quiz</button>
+        </div>
+       
     </form>
     <?php require_once 'footer.php'; ?>
     

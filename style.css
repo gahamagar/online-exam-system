@@ -147,16 +147,23 @@ border-radius: 10px;
 }
 
 .search_bar{
-    position: relative;
+    width: 100%;
+    /* text-align: center; */
+    display: inline-block;
+    /* position: relative;   */
 }
 .search_bar input[type="text"]{
-    width: 94%;
-}
+    /* margin-top: 10%;
+    display: block; 
+    width: 35%;
+    margin-left: 55%;
+    /* align-items: center; */
+    /* justify-content: center; */
+} */
 .search_bar span i {
     position: absolute;
-    right: 10px;
     padding: 3px 0;
-    margin-right: 10px
+    
 
 }
 input[type="text"]{
@@ -225,7 +232,7 @@ height: 50px;
 outline: none;
 border:none;
 font-weight:bolder;
-font-size:1.5vw;
+font-size: 2vw;
 border-radius: 5px;
 color:rgb(100, 100, 100);
 background-color: transparent;
@@ -366,6 +373,7 @@ label.error_message{
     background-color: #161414;
     color:rgb(255, 248, 248);
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .footer-page a{
@@ -424,13 +432,16 @@ display: flex;
     
 
 }
-img{
+
+
+.image_background img{
+    height: 700px;
+}
+.side_image img{ 
     width: 100%;
     height: auto;
-
     display: cover;
-    /* margin-left: 110%; */
-
+   
 }
 
 /* css for table  */
@@ -459,8 +470,20 @@ table tr:first-child {
 
 }
 
-
 /* CSS star for result box */
+
+.submitbtn{
+    align-items: center;
+    /* position: absolute; */
+}
+
+.submitbtn button{
+    padding: auto;
+    margin-bottom: 20px;
+    width:  15%;
+  text-align: center;
+
+}
 
 .result_box{
     margin-top: 50px;
@@ -490,4 +513,12 @@ table tr:first-child {
 }
 
 /* end of css for result box */
+
+
+.printresult button{
+    padding: auto;
+    margin-bottom: 20px;
+    width:  10%;
+
+}
 

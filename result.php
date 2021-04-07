@@ -72,9 +72,11 @@ if (isset($_SESSION['message'])) {
                 <?php endfor ?>
             </table>
         </form>
-
+            <div class="printresult">
+            <button onclick="window.print()">Print Result</button>
+            </div>
     </center>
-    <!-- <script>
+    <script>
             function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
@@ -83,4 +85,4 @@ if (isset($_SESSION['message'])) {
     require_once 'footer.php'?>
 </body>
 
-</html>
+</html> 

@@ -14,10 +14,18 @@
         <img src="image/online exam.png" alt="" srcset="">
         <div class="onlineexam">
         <h3>Wel Come To Online Examination System </h3>
-        <h4>You Can Test Your Skills and Do More Practice and Improve Your Skills</h4>
+        <h4>"You Can Test Your Skills and Do More Practice and Improve Your Skills"</h4>
         <h4>To Take Exam <a href="login.php">Login</a> Here</h4>
         </div>
     </div>
+    <footer class="footer-page">
+        <a href="#">Home</a>
+        |
+        <a href="#">Privacy Policy</a>
+
+        <p class="rights">&copy; 2021 | All Rights Reserved</p>
+
+    </footer>
   
 </body>
 </html>
