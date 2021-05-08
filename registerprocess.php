@@ -7,7 +7,7 @@ $mobile=$_POST['mobile'];
 $address=$_POST['address'];
 $email=$_POST['email'];
 $password=$_POST['password'];
-$sql="insert into students (first_name, last_name,mobile_no, address, email,password) values('$fname','$lname','$mobile', '$address', '$email','$password')";
+$sql="insert into students (first_name, last_name, mobile_no, address, email, password) values('$fname','$lname','$mobile', '$address', '$email','$password')";
 $query=mysqli_query($connection,$sql);
 if($query){
 // echo "data inserted successfully";
