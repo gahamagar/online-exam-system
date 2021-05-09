@@ -12,19 +12,14 @@
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
-        <div class="admin_login">
-            <ul>
-            <li><a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i>  Admin Login</a></li>
-            </ul>
-        </div>
     </div>
     <div class="nav_bar">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
-            <li><a href="result.php">Results</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
-            <li><a href="about.php">About</a></li>
+            <!-- <li><a href="result.php">Results</a></li> -->
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
             <li><a href="login.php">
 
                     <?php

@@ -18,7 +18,7 @@ if ($userpassword == $password) {
     session_start();
     $_SESSION['first_name'] = $result['first_name'];
     $_SESSION['last_name'] = $result['last_name'];
-    $_SESSION['message'] = "LogOut";
+    // $_SESSION['message'] = "LogOut";
 
     header('Location: controlpannel.php');
 } else {

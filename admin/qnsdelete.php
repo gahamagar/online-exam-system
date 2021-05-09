@@ -1,7 +1,7 @@
 <?php
 require_once '../connection.php';
 $id = $_GET['id'];
-$sql = "DELETE FROM questions WHERE sn=$id";
+$sql = "DELETE FROM questions WHERE id=$id";
 $result = mysqli_query($connection, $sql);
 if($result){
     header("location: qnslist.php");

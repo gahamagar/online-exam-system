@@ -1,0 +1,83 @@
+/* CSS START FOR FRONT PAGE */
+body{
+    /* background-color: rgb(221, 221, 221); */
+}
+
+
+.wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* position: relative; */
+    /* display: flex;   */
+    
+}
+.wrapper h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.wrapper h3{
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 4vw;
+    margin-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+img{
+ padding-right: 10px;
+width: 50%;
+height: 500px;
+background-size: cover;
+float: right;
+}
+
+.wrapper h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    margin-left: 20px;
+    font-style: italic;
+    font-weight: 3vw;
+}
+
+
+.wrapper h4 a{
+    padding: 10px;
+    background-color: orangered;
+    color: palegoldenrod;
+    border-radius: 50px;
+    border: solid 1px;
+
+}
+.wrapper h4 a:hover{
+    color: black;
+}
+
+.footer-page{
+    position: fixed;
+    /* bottom: 0; */
+    width: 100%;
+    background-color: #161414;
+    color:rgb(255, 248, 248);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    /* padding-bottom: 0; */
+}
+
+.footer-page a{
+    text-decoration: none;
+    font-size: 18px;
+    color:rgb(135, 135, 135);
+
+    /* font-weight: 100px; */
+}
+
+.footer-page a:hover{
+    color: #fff;
+}
+
+  
+

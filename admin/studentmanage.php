@@ -1,3 +1,16 @@
+<?php
+session_start();
+$firstName = "";
+$message = "";
+if (isset($_SESSION['first_name'])) {
+    $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    //  echo $message;
+}
+?>
+
 <!doctype html>
 <html>
 
@@ -7,6 +20,7 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="no-cache">
 	<meta http-equiv="Expires" content="-1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<link rel="stylesheet" href="../style.css">
 </head>
@@ -15,6 +29,7 @@
 	<div class="heading">
 
 		<h1>WEL COME TO ADMIN PANEL</h1>
+		<?php include '../userprofile.php';?>
 
 	</div>
 
@@ -24,7 +39,6 @@
 			<li><a href="studentmanage.php">Student Manage</a></li>
 			<li><a href="qnsadd.php">Add Questions</a></li>
 			<li><a href="qnslist.php">Question Lists</a></li>
-			<li><a href="adminlogin.php">LogOut</a></li>
 		</ul>
 	</div>
 	<center>
@@ -39,8 +53,8 @@
 						<th width="20%">Student Name</th>
 						<th width="25%">Email</th>
 						<th width="20%">Address</th>
-						<th width="20%">Mobile No.</th>
-						<th width="10%">Action</th>
+						<th width="15%">Mobile No.</th>
+						<th width="15%">Action</th>
 					</tr>
 
 					<?php

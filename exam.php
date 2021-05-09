@@ -1,36 +1,46 @@
+<?php
+include 'connection.php';
+session_start();
+$firstName = "";
+$message = "";
+if (isset($_SESSION['first_name'])) {
+    $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    //  echo $message;
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <title>Questions</title>
-
+    <title>Online Examination System | Test Your Skill</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <?php include "userprofile.php" ?>
     </div>
-    <div class="admin_login">
-            <ul>
-            <li><a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i>  Admin Login</a></li>
-            </ul>
-        </div>
+
     <div class="nav_bar">
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="exam.php">Enroll Exam</a></li>
-            <li><a href="result.php">Results</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="about.php">About Us</a></li>
+            <li><a href="main.php">Home</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
+            <!-- <li><a href="result.php">Results</a></li> -->
+            <li><a href="#">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
             <!-- <li><a href="#">
 
                 </a></li> -->
         </ul>
     </div>
-
+    <div class="question_field">
     <h1>Attempt to All Questions</h1>
 
     <form action="results.php" method="post" id="quiz">
@@ -40,45 +50,53 @@
             require_once './connection.php';
             $sql = "SELECT * FROM questions";
             $query = mysqli_query($connection, $sql);
-            $i = 1;
+            $i = 1; // Let comment this one
             while ($result = mysqli_fetch_assoc($query)) :
+                // let's fetch question id here
+                // echo $result['id']; // Question ID is here
             ?>
 
                 <li>
 
                     <h3><?php echo $result['question'] ?></h3>
-
+                    <!-- hide Question ID in textbox i.e. in [array]  -->
+                    <input type="hidden" name="question_id[]" value="<?php echo $result['id'] ?>">
                     <div>
-                        <input type="radio" name="question-<?php echo $i ?>-answers" id="question-<?php echo $i ?>-answers-A" value="A" />
-                        <label for="question-<?php echo $i ?>-answers-A">A) <?php echo $result['option_a'] ?></label>
+                        <input type="radio" name="answers[<?php echo $result['id'] ?>]" id="question-<?php echo $result['id'] ?>-answers-A" value="A" />
+                        <label for="question-<?php echo $result['id'] ?>-answers-A">A) <?php echo $result['option_a'] ?></label>
                     </div>
 
                     <div>
-                        <input type="radio" name="question-<?php echo $i ?>-answers" id="question-<?php echo $i ?>-answers-B" value="B" />
-                        <label for="question-<?php echo $i ?>-answers-B">B) <?php echo $result['option_b'] ?></label>
+                        <input type="radio" name="answers[<?php echo $result['id'] ?>]" id="question-<?php echo $result['id'] ?>-answers-B" value="B" />
+                        <label for="question-<?php echo $result['id'] ?>-answers-B">B) <?php echo $result['option_b'] ?></label>
                     </div>
 
                     <div>
-                        <input type="radio" name="question-<?php echo $i ?>-answers" id="question-<?php echo $i ?>-answers-C" value="C" />
-                        <label for="question-<?php echo $i ?>-answers-C">C)<?php echo $result['option_c'] ?></label>
+                        <input type="radio" name="answers[<?php echo $result['id'] ?>]" id="question-<?php echo $result['id'] ?>-answers-C" value="C" />
+                        <label for="question-<?php echo $result['id'] ?>-answers-C">C)<?php echo $result['option_c'] ?></label>
                     </div>
 
                     <div>
-                        <input type="radio" name="question-<?php echo $i ?>-answers" id="question-<?php echo $i ?>-answers-D" value="D" />
-                        <label for="question-<?php echo $i ?>-answers-D">D) <?php echo $result['option_d'] ?></label>
+                        <input type="radio" name="answers[<?php echo $result['id'] ?>]" id="question-<?php echo $result['id'] ?>-answers-D" value="D" />
+                        <label for="question-<?php echo $result['id'] ?>-answers-D">D) <?php echo $result['option_d'] ?></label>
                     </div>
 
                 </li>
 
             <?php
-                $i++;
             endwhile
             ?>
 
         </ol>
-        <button type="submit" class="form-element-login">Submit Qiuz</button>
+
+        <div class="submitbtn">
+            <button type="submit">Submit Quiz</button>
+        </div>
+
     </form>
-    <!-- <?php require_once 'footer.php'; ?> -->
+    </div> 
+    <?php require_once 'footer.php'; ?>
+
 </body>
 
 </html>

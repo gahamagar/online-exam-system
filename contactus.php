@@ -18,10 +18,26 @@ if (isset($_SESSION['message'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Online Examination System | Contact Us</title>
 </head>
 <body>
-<?php require_once 'navbar.php'?>
+
+<div class="heading">
+        <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <?php include 'userprofile.php'?>
+    </div>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="main.php">Home</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
+            <!-- <li><a href="result.php">Results</a></li> -->
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
+        </ul>
+    </div>
+
 
 <section class="contact">
     <div class="content">
@@ -35,7 +51,7 @@ if (isset($_SESSION['message'])) {
                 <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Address</h3>
-                    <p>Butwal 10 <br>Kalikanagar Rupandehi</p>
+                    <p>Butwal 10,<br>Kalikanagar Rupandehi</p>
                 </div>
             </div>
             <div class="box">
@@ -82,5 +98,6 @@ if (isset($_SESSION['message'])) {
 include_once "footer.php";
 ?>
     
+
 </body>
 </html>

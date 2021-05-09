@@ -5,7 +5,7 @@
 
 
 {
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -19,6 +19,9 @@
     flex-direction: column;
     background: url(image/laptop-mobile.jpg);
     background-size: cover;
+    margin-bottom: 0;
+    /* top: 200px; */
+    
 }
 
 .contact .content{
@@ -152,7 +155,7 @@
  }
  .container .contactinfo, 
  .contactform{
-     margin-bottom: 100%;
+     margin-bottom: 50%;
  }
 }
 

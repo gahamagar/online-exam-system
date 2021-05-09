@@ -16,11 +16,11 @@ $userpassword = $result['password'];
 if ($userpassword == $password) {
     // echo "login successfull";
     session_start();
+    $_SESSION['id'] = $result['id'];
     $_SESSION['first_name'] = $result['first_name'];
     $_SESSION['last_name'] = $result['last_name'];
-    // $_SESSION['message'] = "LogOut";
 
-    header('Location: index.php');
+    header('Location: main.php');
 } else {
     // echo "invalid credentials";
 

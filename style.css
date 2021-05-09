@@ -16,17 +16,6 @@ font-weight: bolder;
 /* margin-left: 100px; */
 }
 
-.admin_login a{
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 20px;
-
-}
-.admin_login a:hover{
-    background: chartreuse;
-    color: cornsilk;
-}
-
 .form_box{
 /* margin-left:500px; */
 margin-top: 50px;
@@ -103,16 +92,92 @@ border-radius: 10px;
     justify-content: space-between;
 }
 
+.dropbtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 50px;
+
+  }
+    
+  .dropdown {
+   position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 110px;
+    right: 3px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+      background-color: #ddd;}
+  
+  .show {display: block;}
+
+
 .welcome_greeting{
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 30px;
 }
 .welcome_greeting h1{
     font-size: 4vw;
     font-weight: bolder;
-    color: darkorange;
+    color:#161414;
+    
 }
+.welcome_greeting h3{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.search_bar{
+    width: 100%;
+    /* text-align: center; */
+    display: inline-block;
+    /* position: relative;   */
+}
+.search_bar input[type="text"]{
+    /* margin-top: 10%;
+    display: block; 
+    width: 35%;
+    margin-left: 55%;
+    /* align-items: center; */
+    /* justify-content: center; */
+} */
+.search_bar span i {
+    position: absolute;
+    padding: 3px 0;
+    
+
+}
+input[type="text"]{
+border: 2px solid #000;
+color: #000;
+font-size: 15px;
+font-weight: bold;
+padding:10px 25px 10px 10px;
+border-radius: 50px;
+/* border:none; */
+outline:none;
+background-color: transparent;
+}
+
 
 h1{
     font-size: 3vw;
@@ -125,6 +190,7 @@ h1{
 
 
 .main_heading h1{
+    margin-top: 30px;
     text-align: center;
 
     
@@ -154,6 +220,27 @@ a{
     color:rgb(100, 100, 100);
     font-weight: bolder;
 }
+.submit{
+    padding: 10px 15px 10px 10px;
+    border: 2px solid springgreen;
+    background-color: steelblue;
+    border-radius: 10px;
+}
+button .submit-btn{
+/* width:65%; */
+margin-left: 5%;
+height: 50px;
+outline: none;
+border:none;
+font-weight:bolder;
+font-size: 2vw;
+border-radius: 5px;
+color:rgb(100, 100, 100);
+background-color: transparent;
+box-shadow: -7px -7px 17px rgb(243, 243, 243), 7px 7px 17px rgb(128, 128, 128);
+    
+}
+
 .line-break{
 align-items: center;
 justify-content: center;
@@ -244,8 +331,9 @@ ul li a{
 /* background-size: cover; */
 /* height: 800px; */
 width: 100%;
-height: auto;
+height: 80%;
 background-position: center;
+opacity: .7;
 }
 ul li a:hover{
     background-color: #06d03c;
@@ -278,14 +366,15 @@ label.error_message{
 }
 
 .footer-page{
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     width: 100%;
     /* padding-top: 10px; */
     /* margin-bottom: 10px; */
     background-color: #161414;
     color:rgb(255, 248, 248);
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .footer-page a{
@@ -344,13 +433,16 @@ display: flex;
     
 
 }
-img{
+
+
+.image_background img{
+    height: 700px;
+}
+.side_image img{ 
     width: 100%;
-    height: 100%;
-
+    height: auto;
     display: cover;
-    /* margin-left: 110%; */
-
+   
 }
 
 /* css for table  */
@@ -377,4 +469,65 @@ table tr:first-child {
     background: #CC471B;
     border: 0;
 
+}
+
+/* CSS star for result box */
+
+.submitbtn{
+    align-items: center;
+    /* position: absolute; */
+}
+
+.submitbtn button{
+    padding: auto;
+    margin-bottom: 20px;
+    width:  15%;
+  text-align: center;
+
+}
+
+.result_box{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: rgb(221, 221, 221);
+    /* box-shadow: -7px -7px 17px rgb(243, 243, 243), 7px 7px 17px rgb(128, 128, 128); */
+    padding:30px;
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+    background-image: url(./image/congrats\ \(1\).png);
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+
+
+}
+.result_box a{
+    text-align: center;
+    margin-left: 10px;
+}
+.result_box h1{
+    text-align: center;
+   margin-top: 220px;
+   margin-left: 50px;
+}
+
+.result_box h3{
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+/* end of css for result box */
+
+
+.printresult button{
+    padding: auto;
+    margin-bottom: 20px;
+    width:  10%;
+
+}
+
+
+.question_field{
+    margin-left: 100px;
 }

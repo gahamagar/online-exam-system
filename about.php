@@ -19,20 +19,22 @@ if (isset($_SESSION['message'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Online Examination System|About Us</title>
 </head>
 
 <body>
     <div class="heading">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
+        <?php  include 'userprofile.php' ?>
     </div>
     <div class="nav_bar">
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="exam.php">Enroll Exam</a></li>
+            <li><a href="main.php">Home</a></li>
+            <li><a href="exam.php">Take Exam</a></li>
             <li><a href="result.php">Results</a></li>
-            <li><a href="contactus.php">Contact</a></li>
-            <li><a href="about.php">About</a></li>
+            <li><a href="contactus.php">Contact us</a></li>
+            <li><a href="about.php">About us</a></li>
             <li><a href="#">
 
                     <?php
