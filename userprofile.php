@@ -6,7 +6,7 @@
                 <a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a>
                 <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Help</a>
                 <a><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
-                <a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
+                <a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
             </div>
         </div>
 

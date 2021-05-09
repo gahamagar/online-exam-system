@@ -20,7 +20,7 @@ if ($userpassword == $password) {
     $_SESSION['first_name'] = $result['first_name'];
     $_SESSION['last_name'] = $result['last_name'];
 
-    header('Location: index.php');
+    header('Location: main.php');
 } else {
     // echo "invalid credentials";
 

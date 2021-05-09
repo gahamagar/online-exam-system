@@ -1,99 +1,31 @@
-<?php
-session_start();
-$firstName = "";
-$message = "";
-if (isset($_SESSION['first_name'])) {
-    $firstName = $_SESSION['first_name'];
-}
-if (isset($_SESSION['message'])) {
-    $message = $_SESSION['message'];
-    //  echo $message;
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Online Examination System</title>
+    <link rel="stylesheet" href="style1.css">
+    <title>Online Examnation System</title>
 </head>
-
 <body>
-    <div class="heading">
+    
+    <div class="wrapper">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
-        <h3>Test Your Skills and Upgrade Yourself</h3>
-        <div class="dropdown">
-            <span onclick="myFunction()" class="dropbtn"><i class="fa fa-user-circle-o fa-2x"></i></span>
-            <div id="myDropdown" class="dropdown-content">
-                <a>Signed in As</a>
-                <a><i class="fa fa-user-circle-o" aria-hidden="true"></i> <b><?php echo $firstName ?></b></a><hr>
-                <a href="./admin/adminlogin.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a>
-                <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Help</a>
-                <a><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
-                <a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
-            </div>
+        <img src="image/online exam.png" alt="" srcset="">
+        <div class="onlineexam">
+        <h3>Wel Come To Online Examination System </h3>
+        <h4>"You Can Test Your Skills and Do More Practice and Improve Your Skills"</h4>
+        <h4>To Take Exam <a href="login.php">Login</a> Here</h4>
         </div>
-    </div>
-    <div class="nav_bar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="exam.php">Take Exam</a></li>
-            <!-- <li><a href="result.php">Results</a></li> -->
-            <li><a href="contactus.php">Contact us</a></li>
-            <li><a href="about.php">About us</a></li>
-        </ul>
-    </div>
-    <div class="image_background" style="margin: -4px 0;">
-        <img src="image/online-entrance-exam.png" alt="">
-        
-        <div class="welcome_greeting">
-        
-           <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
-        <h3>You Can Test Your Skill From Here <br> And Upgrade Your Skills</h3>
-        <!-- <div class="search_bar">
-            <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
-            <input type="text" placeholder="Search...">
-        </div> -->
-    </div> 
     </div>
     <footer class="footer-page">
         <a href="#">Home</a>
         |
         <a href="#">Privacy Policy</a>
 
-        <p class="rights">&copy;2021 All Rights Reserved</p>
+        <p class="rights">&copy; 2021 | All Rights Reserved</p>
 
     </footer>
-
-
-    <script>
-        /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // // Close the dropdown if the user clicks outside of it
-        // window.onclick = function(event) {
-        //     if (!event.target.matches('.dropbtn')) {
-        //         var dropdowns = document.getElementsByClassName("dropdown-content");
-        //         var i;
-        //         for (i = 0; i < dropdowns.length; i++) {
-        //             var openDropdown = dropdowns[i];
-        //             if (openDropdown.classList.contains('show')) {
-        //                 openDropdown.classList.remove('show');
-        //             }
-        //         }
-        //     }
-        // }
-    </script>
-
-
+  
 </body>
-
 </html>

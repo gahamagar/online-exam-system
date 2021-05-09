@@ -12,8 +12,6 @@ if (isset($_SESSION['message'])) {
 }
 ?>
 
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -32,7 +30,7 @@ if (isset($_SESSION['message'])) {
 
     <div class="nav_bar">
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="main.php">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
             <!-- <li><a href="result.php">Results</a></li> -->
             <li><a href="#">Contact us</a></li>
@@ -42,7 +40,7 @@ if (isset($_SESSION['message'])) {
                 </a></li> -->
         </ul>
     </div>
-
+    <div class="question_field">
     <h1>Attempt to All Questions</h1>
 
     <form action="results.php" method="post" id="quiz">
@@ -96,6 +94,7 @@ if (isset($_SESSION['message'])) {
         </div>
 
     </form>
+    </div> 
     <?php require_once 'footer.php'; ?>
 
 </body>

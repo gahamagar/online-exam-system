@@ -1,10 +1,13 @@
 <?php
 session_start();
 $firstName = "";
-// $lastName = "";
+$lastName = "";
 $message = "";
 if (isset($_SESSION['first_name'])) {
     $firstName = $_SESSION['first_name'];
+}
+if (isset($_SESSION['last_name'])) {
+    $lastName = $_SESSION['last_name'];
 }
 
 if (isset($_SESSION['id'])) {
@@ -131,7 +134,8 @@ if (isset($_SESSION['message'])) {
                 echo "<div id='results'><h3>$totalCorrect Out Of $totalQuestions</h3></div>";
 
                 ?>
-                <h3><a href="result.php">Click Here</a> To Check Your Position</h3>
+                <h3>THANK YOU FOR PARTICIPATING</h3>
+                <a href="index.php">Go Back To Home</a>
             </div>
         </center>
     </div>

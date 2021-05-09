@@ -30,7 +30,7 @@ if (isset($_SESSION['message'])) {
     </div>
     <div class="nav_bar">
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="main.php">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
             <li><a href="result.php">Results</a></li>
             <li><a href="contactus.php">Contact us</a></li>
