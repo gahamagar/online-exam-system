@@ -2,7 +2,7 @@
     include '../connection.php';
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM questions WHERE sn = '$id'";
+    $sql = "SELECT * FROM questions WHERE id = '$id'";
 
     $result = mysqli_query($connection, $sql);
 

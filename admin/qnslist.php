@@ -71,8 +71,8 @@ if (isset($_SESSION['message'])) {
                             <td><?php echo $i ?></td>
                             <td><?php echo $question ?></td>
                             <td>
-                                <a onclick="return confirm('Are you Sure to remove')" href="qnsdelete.php?id=<?php echo $row['sn'] ?>">Remove</a>
-                                <a onclick="return confirm('Are you sure to update this question')" href="qnsupdate.php?id=<?php echo $row['sn'] ?>">Update</a>
+                                <a onclick="return confirm('Are you Sure to remove')" href="qnsdelete.php?id=<?php echo $row['id'] ?>">Remove</a>
+                                <a onclick="return confirm('Are you sure to update this question')" href="qnsupdate.php?id=<?php echo $row['id'] ?>">Update</a>
                             </td>
 
                         </tr>

@@ -34,7 +34,7 @@ if (isset($_SESSION['message'])) {
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
-            <li><a href="result.php">Results</a></li>
+            <!-- <li><a href="result.php">Results</a></li> -->
             <li><a href="contactus.php">Contact us</a></li>
             <li><a href="about.php">About us</a></li>
         </ul>
@@ -57,16 +57,28 @@ if (isset($_SESSION['message'])) {
                     <th>Rank</th>
                     <th>Remarks</th>
                 </tr>
-                <?php for($i=1; $i<10; $i++):?>
+                <?php for($i=1; $i<2; $i++):?>
                 <tr>
                     <td>00<?php echo $i ?></td>
+                    <td>Jayanti</td>
+                    <td>Shrestha</td>
+                    <td>Devinagar</td>
+                    <td>48</td>
+                    <td>50</td>
+                    <td>A+</td>
+                    <td><?php echo $i ?></td>
+                    <td>Null</td>
+                </tr>
+
+                <tr>
+                    <td>002</td>
                     <td>Ganesh</td>
                     <td>Gaha</td>
-                    <td>Devinagar</td>
+                    <td>Hospital line</td>
                     <td>4<?php echo $i ?></td>
                     <td>50</td>
                     <td>A</td>
-                    <td><?php echo $i ?></td>
+                    <td>2</td>
                     <td>Null</td>
                 </tr>
                 <?php endfor ?>

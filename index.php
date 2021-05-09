@@ -43,7 +43,7 @@ if (isset($_SESSION['message'])) {
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
-            <li><a href="result.php">Results</a></li>
+            <!-- <li><a href="result.php">Results</a></li> -->
             <li><a href="contactus.php">Contact us</a></li>
             <li><a href="about.php">About us</a></li>
         </ul>
@@ -54,11 +54,11 @@ if (isset($_SESSION['message'])) {
         <div class="welcome_greeting">
         
            <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
-        <h3>You Can Test Your Skill Form Here <br> And Upgrade Your Skills</h3>
-        <div class="search_bar">
+        <h3>You Can Test Your Skill From Here <br> And Upgrade Your Skills</h3>
+        <!-- <div class="search_bar">
             <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
             <input type="text" placeholder="Search...">
-        </div>
+        </div> -->
     </div> 
     </div>
     <footer class="footer-page">

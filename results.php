@@ -5,10 +5,12 @@ $firstName = "";
 $message = "";
 if (isset($_SESSION['first_name'])) {
     $firstName = $_SESSION['first_name'];
-
-    // if (isset($_SESSION['last_name'])) {
-    //     $lastName = $_SESSION['last_name'];
 }
+
+if (isset($_SESSION['id'])) {
+    $student_id = $_SESSION['id'];
+}
+
 if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
     //  echo $message;
@@ -47,7 +49,7 @@ if (isset($_SESSION['message'])) {
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="exam.php">Take Exam</a></li>
-            <li><a href="result.php">Results</a></li>
+            <!-- <li><a href="result.php">Results</a></li> -->
             <li><a href="contactus.php">Contact us</a></li>
             <li><a href="about.php">About us</a></li>
         </ul>
@@ -58,27 +60,17 @@ if (isset($_SESSION['message'])) {
 
 
         require_once './connection.php';
+        $studentAnswers = array();
         // Displaying all submitted question ids
         $questionIds = $_POST['question_id']; // you got ids in array format
         // let's use loop i.e. foreach loop to loop each items in array
         foreach ($questionIds as $key => $id) {
-            echo $id; // 5, 6, 8, 1, 2 all are your question number
-            // Now let us display submitted answers here
+            // echo $id; // 5, 6, 8, 1, 2 all are your question number
+            // // Now let us display submitted answers here
 
-            $answer = $_POST['answers'][$id];
-           
-            session_start();
-                $student_id = "";
-                // $lastName = "";
-                $message = "";
-                if (isset($_SESSION['id'])) {
-                    $student_id = $_SESSION['id'];
-            
-
-
-            // like this 
-            echo '=>';
-            echo $answer . "<br />"; // In your form field name is in array format answers[id]
+            // // like this 
+            // echo '=>';
+            // echo $answer . "<br />"; // In your form field name is in array format answers[id]
             // System is displaying
             // Q=>A
             // 5=>A
@@ -88,6 +80,8 @@ if (isset($_SESSION['message'])) {
             // $_POST['answers'][$id] this displays => A i.e. option_no | answer
             //please try
 
+            $answer = $_POST['answers'][$id];
+            $studentAnswers[$id] = $answer;
 
             $sql = "INSERT INTO answers (question_id, student_id, answer) VALUES('$id', '$student_id',  '$answer')";
             $query = mysqli_query($connection, $sql);
@@ -108,20 +102,18 @@ if (isset($_SESSION['message'])) {
         //i created table for insert answer.
         // Okay thats good. now insert question and answer in that table => Q-1 and Answer A | B |C |D
 
-
-        $query = mysqli_query($connection, "SELECT * FROM questions");
-        $totalQuestions = mysqli_num_rows($query);
-        $correct_ans = 'correct_ans';
-        $answer = $_POST['correct_ans'];
-
-
         $totalCorrect = 0;
         $onecorrect = 5;
 
-        if ($answer == "correct_ans") {
-            $totalCorrect++;
+        $query = mysqli_query($connection, "SELECT * FROM questions");
+        $totalQuestions = mysqli_num_rows($query);
+        while ($row = mysqli_fetch_array($query)) {
+            // echo "---------------------<br />";
+            // echo $row['id'] . "=>" . $row['correct_ans'] . "<br />";
+            $qid = $row['id'];
+            if ($studentAnswers[$qid] == $row['correct_ans'])
+                $totalCorrect ++;
         }
-
 
 
         $examResult = number_format($totalCorrect * $onecorrect);
