@@ -41,12 +41,12 @@ if (isset($_SESSION['message'])) {
 <center>
 <div class="main">
     <h1>Admin Control Panel</h1>
-<form action="" class="control_box">
+<div class="control_box">
 
 <h2>Wel come to Admin Control Panel</h2>
 <p>You Can Manage your Students and Online Examination System Form Here.....</p>
 
-</form>
+</div>
 </div>
 
 <footer class="footer-page">

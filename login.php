@@ -23,16 +23,14 @@ unset($_SESSION['message']);
 </head>
 <body>
     <div class="main_heading">
-        <h1>ONLINE EAMINATION SYSTEM</h1>
+        <h1>ONLINE EXAMINATION SYSTEM</h1>
     </div>
     <center>
 <form class="form_box" action="loginprocess.php" method="POST">
     <div class="heading">
-        <h1>
-            LOGIN
-        </h1>
+        <h1>LOGIN</h1>
     </div>
-<input type="name" name="email" class="form-element-login" placeholder="Email" required=''>
+<input type="email" name="email" class="form-element-login" placeholder="Email" required=''>
 <input type="password" name="password" class="form-element-login" placeholder="Password" required=''>
 <label class="error_message">
     <?php

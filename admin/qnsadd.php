@@ -35,25 +35,25 @@ if (isset($_SESSION['message'])) {
 
 <div class="nav_bar">
     <ul>
-    <li><a href="controlpannel.php">Home</a></li>
+    <li><a href="adminpanel.php">Home</a></li>
     <li><a href="studentmanage.php">Student Manage</a></li>
     <li><a href="qnsadd.php">Add Questions</a></li>
     <li><a href="qnslist.php">Question Lists</a></li>
     </ul>
 </div>
 <center>
-<div class="heading">
+<div class="main_heading">
 <h1>You Can Add Questions From Here</h1>
 
 </div>
 <form action="qnsaddprocess.php" class="qnsadd" method="POST">
-    <input type="name" name="number" class="form-element-login" placeholder="Question No.">
-    <input type="name" name="question" class="form-element-login" placeholder="Enter Question" required>
-    <input type="name" name="ans_a" class="form-element-login" placeholder="Option A" required>
-    <input type="name" name="ans_b" class="form-element-login" placeholder="Option B" required>
-    <input type="name" name="ans_c" class="form-element-login" placeholder="Option C" required>
-    <input type="name" name="ans_d" class="form-element-login" placeholder="Option D" required>
-    <input type="name" name="correct_ans" class="form-element-login" placeholder="Correct Answer" required>
+    <input type="text" name="number" class="form-element-login" placeholder="Question No.">
+    <input type="text" name="question" class="form-element-login" placeholder="Enter Question" required>
+    <input type="text" name="ans_a" class="form-element-login" placeholder="Option A" required>
+    <input type="text" name="ans_b" class="form-element-login" placeholder="Option B" required>
+    <input type="text" name="ans_c" class="form-element-login" placeholder="Option C" required>
+    <input type="text" name="ans_d" class="form-element-login" placeholder="Option D" required>
+    <input type="text" name="correct_ans" class="form-element-login" placeholder="Correct Answer" required>
 <button type="submit" class="form-element-login">Add Question</button>
 
 </form>

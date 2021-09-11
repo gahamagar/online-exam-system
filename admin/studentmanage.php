@@ -35,7 +35,7 @@ if (isset($_SESSION['message'])) {
 
 	<div class="nav_bar">
 		<ul>
-			<li><a href="controlpannel.php">Home</a></li>
+			<li><a href="adminpanel.php">Home</a></li>
 			<li><a href="studentmanage.php">Student Manage</a></li>
 			<li><a href="qnsadd.php">Add Questions</a></li>
 			<li><a href="qnslist.php">Question Lists</a></li>

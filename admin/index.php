@@ -28,6 +28,8 @@ unset($_SESSION['message']);
     <div class="main_heading">
         <h1>ONLINE EAMINATION SYSTEM</h1>
     </div>
+    <div><h3 style="text-align: center;">Welcome To Control Panel of Online Examination System</h3></div>
+
     <center>
 <form class="form_box" action="adminloginprocess.php" method="POST">
     <div class="heading">
@@ -35,7 +37,7 @@ unset($_SESSION['message']);
             ADMIN LOGIN
         </h1>
     </div>
-<input type="name" name="email" class="form-element-login" placeholder="Email" required=''>
+<input type="email" name="email" class="form-element-login" placeholder="Email" required=''>
 <input type="password" name="password" class="form-element-login" placeholder="Password" required=''>
 <label class="error_message">
     <?php

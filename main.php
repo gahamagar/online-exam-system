@@ -55,10 +55,7 @@ if (isset($_SESSION['message'])) {
         
            <h1>Dear <span style="color: #FF5733;"><?php echo $firstName ?></span>,<br>Welcome To </br> Online Examination System</h1>
         <h3>You Can Test Your Skill From Here <br> And Upgrade Your Skills</h3>
-        <!-- <div class="search_bar">
-            <span><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
-            <input type="text" placeholder="Search...">
-        </div> -->
+       
     </div> 
     </div>
     <footer class="footer-page">

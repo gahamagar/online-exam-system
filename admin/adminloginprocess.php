@@ -20,11 +20,11 @@ if ($userpassword == $password) {
     $_SESSION['last_name'] = $result['last_name'];
     // $_SESSION['message'] = "LogOut";
 
-    header('Location: controlpannel.php');
+    header('Location: adminpanel.php');
 } else {
     // echo "invalid credentials";
 
     session_start();
     $_SESSION['message'] = "Incorrect Password";
-    header('Location: adminlogin.php');
+    header('Location: index.php');
 }

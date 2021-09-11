@@ -11,11 +11,11 @@
     
     <div class="wrapper">
         <h1>ONLINE EXAMINATION SYSTEM</h1>
-        <img src="image/online exam.png" alt="" srcset="">
+        <img src="image/online exam.png">
         <div class="onlineexam">
         <h3>Wel Come To Online Examination System </h3>
         <h4>"You Can Test Your Skills and Do More Practice and Improve Your Skills"</h4>
-        <h4>To Take Exam <a href="login.php">Login</a> Here</h4>
+        <h4>To Take Exam <a href="register.php">Register</a> Here</h4>
         </div>
     </div>
     <footer class="footer-page">
